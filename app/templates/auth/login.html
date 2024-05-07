@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Login - FlyTool{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="my-4">Login</h2>
+    <form method="post" action="/auth/login" novalidate>
+        {{ form.hidden_tag() }}
+        <div class="mb-3">
+            {{ form.email.label(class="form-label") }}
+            {{ form.email(class="form-control") }}
+            {% if form.email.errors %}
+                <div class="alert alert-danger">{{ form.email.errors[0] }}</div>
+            {% endif %}
+        </div>
+        <div class="mb-3">
+            {{ form.password.label(class="form-label") }}
+            {{ form.password(class="form-control") }}
+            {% if form.password.errors %}
+                <div class="alert alert-danger">{{ form.password.errors[0] }}</div>
+            {% endif %}
+        </div>
+
+        <div class="mb-3">
+            {{ form.errors(class="form-control") }}
+            {% if form.errors.errors %}
+                  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>{{ form.errors.errors[0] }}</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+            {% endif %}
+        </div>
+
+        <div class="mb-3">
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+    </form>
+</div>
+{% endblock %}

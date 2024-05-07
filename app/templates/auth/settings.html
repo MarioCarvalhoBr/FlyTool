@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}Settings - FlyTool{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h2 class="my-4">Settings</h2>
+    <form method="post" action="/auth/settings" novalidate>
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.name.label(class="form-label") }}
+            {{ form.name(class="form-control") }}
+            {% if form.name.errors %}
+            <div class="alert alert-danger">
+                {{ form.name.errors[0] }}
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.last_name.label(class="form-label") }}
+            {{ form.last_name(class="form-control") }}
+            {% if form.last_name.errors %}
+            <div class="alert alert-danger">
+                {{ form.last_name.errors[0] }}
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.email.label(class="form-label") }}
+            {{ form.email(class="form-control") }}
+            {% if form.email.errors %}
+            <div class="alert alert-danger">
+                {{ form.email.errors[0] }}
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.old_password.label(class="form-label") }}
+            {{ form.old_password(class="form-control") }}
+            {% if form.old_password.errors %}
+            <div class="alert alert-danger">
+                {{ form.old_password.errors[0] }}
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.new_password.label(class="form-label") }}
+            {{ form.new_password(class="form-control") }}
+            {% if form.new_password.errors %}
+            <div class="alert alert-danger">
+                {{ form.new_password.errors[0] }}
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.confirm_password.label(class="form-label") }}
+            {{ form.confirm_password(class="form-control") }}
+            {% if form.confirm_password.errors %}
+            <div class="alert alert-danger">
+                {{ form.confirm_password.errors[0] }}
+            </div>
+            {% endif %}
+        </div>
+
+
+        <div class="mb-3">
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+
+    </form>
+</div>
+{% endblock %}

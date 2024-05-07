@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}My Products - FlyTool{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h2 class="my-4">My Products</h2>
+    <a href="{{ url_for('product.add') }}" class="btn btn-primary">Add</a>
+    <br>
+    <br>
+
+
+    <div class="table-responsive">
+        <table id="productsTable" class="table table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>File zip</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in products %}
+                <tr>
+                    <td>{{ product.id }}</td>
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.description }}</td>
+                    <td>
+                        <a href="{{ url_for('static', filename='uploads/' + product.file_zip_path) }}"
+                            class="btn-primary btn-sm"
+                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Download</a>
+                    </td>
+
+                    <td>
+                        <a href="{{ url_for('product.edit', id=product.id) }}" class="btn btn-success">Edit</a>
+                       
+                        <a href="#" class="btn btn-danger delete-btn"
+                            onclick="confirmDelete('{{ product.id }}')">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<br>
+
+<script>
+
+    var clientesTable = createDataTable('#productsTable');
+
+    function deleteData(id) {
+        window.location.href = '/product/delete/' + id;
+    }
+
+</script>
+{% endblock %}

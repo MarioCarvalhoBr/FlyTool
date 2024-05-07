@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Product - FlyTool{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="my-4">Edit Product</h2>
+    <form method="post" enctype="multipart/form-data" novalidate>
+        {{ form.hidden_tag() }}
+        <div class="mb-3">
+            {{ form.name.label(class="form-label") }}
+            {{ form.name(class="form-control") }}
+            {% if form.name.errors %}
+                <div class="alert alert-danger">{{ form.name.errors[0] }}</div>
+            {% endif %}
+        </div>
+        <div class="mb-3">
+            {{ form.description.label(class="form-label") }}
+            {{ form.description(class="form-control") }}
+            {% if form.description.errors %}
+             <div class="alert alert-danger">{{ form.description.errors[0] }}</div>
+            {% endif %}
+        </div>
+        <div class="mb-3">
+            {{ form.file_zip_path.label(class="form-label") }}
+            {{ form.file_zip_path(class="form-control", value=product.file_zip_path, disabled="disabled") }}
+        </div>
+        <div class="mb-3">
+            {{ form.file_data.label(class="form-label") }}
+            {{ form.file_data(class="form-control") }}
+                {% if form.file_data.errors %}
+                <div class="alert alert-danger">{{ form.file_data.errors[0] }}</div>
+            {% endif %}
+        </div>
+        <div class="mb-3">
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+    </form>
+    
+</div>
+{% endblock %}
