@@ -57,14 +57,13 @@ FlyTool is a comprehensive product management system designed to handle the intr
 ## Usage
 Navigate to `http://127.0.0.1:5000/` in your web browser to start using FlyTool.
 
-## Contributing
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+## Screenshots
+| ![image_01](screenshots/image_06.png) | ![image_02](screenshots/image_07.png) |
+|---------------------------------------|---------------------------------------|
+| ![image_03](screenshots/image_05.png) | ![image_04](screenshots/image_04.png) |
+| ![image_05](screenshots/image_03.png) | ![image_06](screenshots/image_02.png) |
+| ![image_07](screenshots/image_01.png) | ![image_08](screenshots/image_08.png) |
+| ![image_09](screenshots/image_09.png) | ![image_10](screenshots/image_10.png) |
 
 ## License
 Distributed under the MIT License. See `LICENSE` for more information.
@@ -83,3 +82,13 @@ Distributed under the MIT License. See `LICENSE` for more information.
 - **Contributing**: Guidelines for contributing to the project.
 - **License**: Information about the license under which the project is distributed.
 - **Contact**: Contact information for the author or maintainer of the project.
+
+
+## Contributing
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
