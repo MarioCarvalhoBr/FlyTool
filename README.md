@@ -70,8 +70,8 @@ Contributions are what make the open-source community such an amazing place to l
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
-Mário de Araújo Carvalho - mariodearaujocarvalho@gmail.com
-Project Link: [https://github.com/MarioCarvalhoBr/FlyTool](https://github.com/MarioCarvalhoBr/FlyTool)
+ - Mário de Araújo Carvalho - mariodearaujocarvalho@gmail.com
+ - Project Link: [https://github.com/MarioCarvalhoBr/FlyTool](https://github.com/MarioCarvalhoBr/FlyTool)
 
 ### Description of Sections
 
